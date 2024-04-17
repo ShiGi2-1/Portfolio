@@ -1,0 +1,461 @@
+/*--------- fonts--------- */
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bebas+Neue&family=Bungee&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Beau+Rivage&family=Bebas+Neue&family=Bungee&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&family=Patrick+Hand&family=Rye&display=swap');
+/*----------couleurs site------------:*/
+.ongle {
+    background-color: var(--color_text);
+    height: 14vh;
+    width: 69.85vh;
+    z-index: 4;
+    margin-top: 60vh;
+    margin-left: 30.1vw;
+    position: fixed;
+    border-radius: 2vh;
+    opacity: 0; /* Initialement invisible */
+    transform: scale(1); /* Réduit l'échelle à 50% */
+    transition: opacity 5s ease, transform 5s ease; /* Transition pour l'opacité et l'échelle */
+}
+
+.ongle:hover {
+    opacity: 1; /* Rendre l'élément complètement visible au survol */
+    transform: scale(1); /* Revenir à l'échelle normale */
+}
+
+
+
+:root {
+    --background_form    : #b2a599;
+    --background_form_2  : #cdbfa4;
+    --background_section : #E3D2B4;
+    --background_fiches  : #DDD5C8;
+    --color_text         : #454545;
+}
+/* ---------------------------------- */
+
+body {
+    overflow-x: hidden; /* Active le défilement horizontal */
+    overflow-y: hidden; /* Empêche le défilement vertical */
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+.container {
+    white-space: nowrap; /* Empêche le saut de ligne des éléments enfants */
+    font-size: 0; /* Fixe un problème d'espacement entre les éléments inline-block */
+    display: flex; /* Utilisation de flexbox pour les sections */
+}
+
+.section {
+    flex: 0 0 100vw; /* Ajustement de la largeur des sections */
+    height: 100vh; /* Hauteur de la section */
+    display: inline-block; /* Place chaque section côte à côte */
+    width: 100vw; /* Largeur égale à la largeur de la fenêtre */
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    text-align: center; /* Centre le contenu de la section */
+    font-size: 2em; /* Taille de la police */
+    /* background-color: var(--background_section); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1{
+    background-image: url(../img/wall.png);
+}
+.section-2{
+    background-image: url(../img/wall-section-2.png);
+}
+.section-3{
+    background-image: url(../img/wall-section-3.png);
+}
+
+.fiche {
+    background-color: var(--background_fiches); /* Couleur de fond de la fiche */
+    border-radius: 15px; /* Coins arrondis */
+    overflow: hidden; /* Cache le contenu débordant de la fiche */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    height: 85vh; /* Hauteur de la fiche */
+    width: 70vh; /* Largeur de la fiche */
+    margin: 20px; /* Marge autour de la fiche */ 
+    display: flex;
+    flex-direction: column; 
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.fiche-top-1{
+    border-bottom: var(--color_text) dashed 2.7px;
+    overflow: hidden;
+    height: 27vh;
+    width: 58vh;
+}
+
+.fiche-top-1 h3{
+    color: var(--color_text);
+    font-size: 10vh;
+    transform: scaleY(2) scaleX(2);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 5px;
+}
+
+.fiche-center-1 {
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.photo {
+    height: 22vh;
+    width: 27vh;
+    z-index: 1;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo p {
+    position: absolute;
+    color: rgb(140, 38, 38);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7vh;
+    font-weight: bolder;
+    border: solid rgb(140, 38, 38) 3px;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-left: 115%;
+    margin-top: -45%;
+    transform: translate(-100%);
+    z-index: 4;
+    letter-spacing: 0.5px;
+    padding: 0.7vh;
+    padding-inline: 1vh;
+    rotate: 8deg;
+}
+.photo img {
+    height: 22vh;
+    width: 22vh;
+    margin-bottom: 20px;
+}
+
+.identifiee {
+    background-color: var(--color_text);
+    height: auto; /* Modifier la hauteur pour s'adapter au contenu */
+    width: 33vh;
+    color: var(--background_fiches);
+    align-items: center; /* Ajout de l'alignement au centre pour centrer le contenu */
+}
+
+.identifiee h2 {
+    font-size: 50px;
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 13px;
+}
+
+.identifiee p {
+    font-size: 15px;
+    margin-top: -30px; /* Ajout d'une marge au-dessus du paragraphe */
+    padding-bottom: 10px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    transform: scaleX(1.5);
+}
+
+.fiche-bottom-1 {
+    width: 56vh;
+    height: 15vh;
+    margin-top: 5vh;
+    border-top: #454545 dashed 2.5px;
+    color: #454545;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Ajout de cette ligne pour aligner les éléments verticalement */
+}
+
+.fiche-bottom-1 h2 {
+    font-size: 2.3vh; /* Taille de la police pour le titre */
+    margin-right: 10vh;
+}
+
+.fiche-bottom-1 p {
+    margin: 0; /* Supprime les marges par défaut du paragraphe */
+    font-size: 1.4vh; /* Taille de la police pour le paragraphe */
+    text-align: center; /* Centre le texte */
+    overflow-wrap: break-word; /* Permet le retour à la ligne après chaque mot */
+    max-width: 28vh; /* Largeur maximale du paragraphe */
+    word-spacing: 0.4vw;
+    padding-right: 20vw;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fiche {
+    /* Vos styles actuels */
+    /* Ajoutez les propriétés pour l'animation */
+    animation: slideIn 1s ease forwards; /* Utilisation de l'animation avec une durée de 0.5 seconde */
+}
+
+/*------------------------- SECTION 2------------------ */
+
+
+.fiche-top-2{
+    border-bottom: var(--color_text) dashed 2.7px;
+    overflow: hidden;
+    height: 45vh;
+    width: 58vh;
+    display: flex;
+    flex-direction: column;
+}
+.langage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    width: 5vh;
+}
+.titre h2{
+    font-size: 2vh;
+    margin-left: 0.5vh;
+}
+.nom{
+    display: flex;
+}
+.nom p{
+    font-size: 1.5vh;
+    margin-right: 15vh;
+}
+.lignes_n{
+    background-color: var(--color_text);
+    height: 0.6vh;
+}
+.lignes_b{
+    background-color: white;
+    height: 0.6vh;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    margin-right: 3.8vh;
+}
+.lignes_b_1{
+    width: 5vh;
+}
+.lignes_n_1{
+    width: 21vh;
+}
+.lignes_b_2{
+    width: 5vh;
+}
+.lignes_n_2{
+    width: 21vh;
+}
+.lignes_b_3{
+    width: 8vh;
+}
+.lignes_n_3{
+    width: 18vh;
+}
+.lignes_b_4{
+    width: 13vh;
+}
+.lignes_n_4{
+    width: 13vh;
+}
+.lignes_b_5{
+    width: 13vh;
+}
+.lignes_n_5{
+    width: 13vh;
+}
+.pourcentage p{
+    font-size: 1.5vh;
+}
+
+.fiche-center-2 {
+    overflow: hidden;
+    height: 33vh;
+    width: 58vh;
+}
+
+.icones {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 colonnes de largeur égale */
+    gap: 20px;
+    justify-content: center;
+    grid-auto-flow: dense; /* Remplit les éléments en commençant par la première ligne */
+}
+
+.icone img{
+    width: 7vh;
+    height: 7vh;
+    margin-bottom: 2vh;
+    border-radius: 5vh;
+}
+
+.icones {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 colonnes de largeur égale */
+    gap: 20px;
+    justify-content: center;
+    grid-auto-flow: dense; /* Remplit les éléments en commençant par la première ligne */
+}
+
+.icone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone img {
+    width: 7vh;
+    height: 7vh;
+    margin-bottom: -0.5vh;
+    border-radius: 5vh;
+}
+
+.icone span {
+    font-size: 1.5vh;
+}
+
+
+.fiche-bottom-2 {
+    border-top: var(--color_text) dashed 2.7px;
+    overflow: hidden;
+    height: 25vh;
+    width: 58vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form{
+    width: 65vh;
+    height: 20.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+.input-group div label {
+    display: block;
+}
+#nom, #email{
+    height: 3vh;
+    width: 95%;
+    border-radius: 5%;
+    margin-bottom: 0.4svh;
+    background-color: var(--background_form);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+    color:var(--color_text);
+}
+#nom{
+    margin-right: 5%;
+}
+#message {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--background_form);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+}
+::placeholder{
+    color:var(--color_text);
+    font-size: 1.3vh;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    height: 4vh;
+    background-color: var(--color_text);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+    color:var(--background_fiches);
+    
+}
+
+.fiche-top-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30vh;
+    width: 58vh;
+    margin-left: 1vh;
+    margin-top: 4vh;
+}
+
+.photo-project img {
+    height: 20vh;
+    width: 55vh;
+    border-radius: 15px; /* Coins arrondis */
+    overflow: hidden; /* Cache le contenu débordant de la fiche */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    position: relative;
+}
+
+.text-projects {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 55vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+}
+
+.text-projects h2{
+    font-size: 2vh;
+    color: var(--color_text);
+}
+.text-projects p {
+    font-size: 1.4vh;
+    width: 30vh;
+    height: 22vh;
+    margin-left: 12vh;
+}
+
+.photo-project img{
+    transition: 1s ease-in-out;
+    z-index: 3;
+    border: solid 2px black;
+}
+.photo-project img.front:hover{
+    opacity: 0;
+    cursor: pointer;
+} 
+
+
+
