@@ -6,8 +6,8 @@ function wheelScroll(event) {
     if (isScrolling) return;
     isScrolling = true;
 
-    // Durée de transition entre les sections (en millisecondes)
-    const transitionDuration = 2000; // 2 secondes
+    // Durée de transition entre les sections 
+    const transitionDuration = 2000; 
     const startTime = performance.now();
     const sections = document.querySelectorAll('.section'); // Sélectionne toutes les sections
     const sectionWidth = sections[0].offsetWidth; // Obtient la largeur d'une section

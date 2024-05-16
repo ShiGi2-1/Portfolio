@@ -43,6 +43,7 @@ body {
     white-space: nowrap; /* Empêche le saut de ligne des éléments enfants */
     font-size: 0; /* Fixe un problème d'espacement entre les éléments inline-block */
     display: flex; /* Utilisation de flexbox pour les sections */
+    background-color: #cdbfa4;
 }
 
 .section {
@@ -59,14 +60,17 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
+
 .section-1{
-    background-image: url(../img/wall.png);
+    background-image: url(../img/projects/wall.png);
 }
 .section-2{
-    background-image: url(../img/wall-section-2.png);
+    background-image: url(../img/projects/wall-section-2.png);
 }
 .section-3{
-    background-image: url(../img/wall-section-3.png);
+    background-image: url(../img/projects/wall-section-3.png);
 }
 
 .fiche {
@@ -121,13 +125,13 @@ body {
 }
 .photo p {
     position: absolute;
-    color: rgb(140, 38, 38);
+    color: rgb(41, 140, 38);
     font-family: "Bebas Neue", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.7vh;
     font-weight: bolder;
-    border: solid rgb(140, 38, 38) 3px;
+    border: solid rgb(41, 140, 38) 3px;
     border-radius: 10px;
     margin-top: 0;
     margin-left: 115%;
@@ -274,22 +278,28 @@ body {
     width: 21vh;
 }
 .lignes_b_3{
-    width: 8vh;
+    width: 7vh;
 }
 .lignes_n_3{
-    width: 18vh;
+    width: 19vh;
 }
 .lignes_b_4{
-    width: 13vh;
+    width: 9vh;
 }
 .lignes_n_4{
-    width: 13vh;
+    width: 17vh;
 }
 .lignes_b_5{
     width: 13vh;
 }
 .lignes_n_5{
     width: 13vh;
+}
+.lignes_b_6{
+    width: 21vh;
+}
+.lignes_n_6{
+    width: 5vh;
 }
 .pourcentage p{
     font-size: 1.5vh;
