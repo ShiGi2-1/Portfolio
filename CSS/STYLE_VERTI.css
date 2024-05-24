@@ -64,13 +64,19 @@ body {
 
 
 .section-1{
-    background-image: url(../img/projects/wall.png);
+    background-image: url(img/projects/wall.png);
 }
 .section-2{
-    background-image: url(../img/projects/wall-section-2.png);
+    background-image: url(img/projects/wall-section-2.png);
 }
 .section-3{
-    background-image: url(../img/projects/wall-section-3.png);
+    background-image: url(img/projects/wall-section-2.png);
+}
+.section-4{
+    background-image: url(img/projects/wall-section-2.png);
+}
+.section-5{
+    background-image: url(img/projects/wall-section-2.png);
 }
 
 .fiche {
@@ -189,7 +195,7 @@ body {
 
 .fiche-bottom-1 h2 {
     font-size: 2.3vh; /* Taille de la police pour le titre */
-    margin-right: 10vh;
+    margin-right: 7.5vh;
 }
 
 .fiche-bottom-1 p {
@@ -227,9 +233,15 @@ body {
     border-bottom: var(--color_text) dashed 2.7px;
     overflow: hidden;
     height: 45vh;
-    width: 58vh;
+    width: 60vh;
     display: flex;
+    justify-content:first baseline;
     flex-direction: column;
+}
+.block-1, .block-2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 .langage{
     display: flex;
@@ -240,12 +252,14 @@ body {
 .logo img{
     display: flex;
     align-items: center;
-    height: 5vh;
-    width: 5vh;
+    height: 7vh;
+    width: 7vh;
 }
 .titre h2{
     font-size: 2vh;
     margin-left: 0.5vh;
+    margin-bottom: 2vh;
+    text-decoration: solid 2px underline;
 }
 .nom{
     display: flex;
@@ -254,101 +268,51 @@ body {
     font-size: 1.5vh;
     margin-right: 15vh;
 }
-.lignes_n{
-    background-color: var(--color_text);
-    height: 0.6vh;
-}
-.lignes_b{
-    background-color: white;
-    height: 0.6vh;
-    border-top-right-radius: 20%;
-    border-bottom-right-radius: 20%;
-    margin-right: 3.8vh;
-}
-.lignes_b_1{
-    width: 5vh;
-}
-.lignes_n_1{
-    width: 21vh;
-}
-.lignes_b_2{
-    width: 5vh;
-}
-.lignes_n_2{
-    width: 21vh;
-}
-.lignes_b_3{
-    width: 7vh;
-}
-.lignes_n_3{
-    width: 19vh;
-}
-.lignes_b_4{
-    width: 9vh;
-}
-.lignes_n_4{
-    width: 17vh;
-}
-.lignes_b_5{
-    width: 13vh;
-}
-.lignes_n_5{
-    width: 13vh;
-}
-.lignes_b_6{
-    width: 21vh;
-}
-.lignes_n_6{
-    width: 5vh;
-}
-.pourcentage p{
-    font-size: 1.5vh;
-}
 
 .fiche-center-2 {
     overflow: hidden;
-    height: 33vh;
+    height: 62vh;
     width: 58vh;
 }
 
 .icones {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 5 colonnes de largeur égale */
+    grid-template-columns: repeat(4, 1fr); /* 5 colonnes de largeur égale */
     gap: 20px;
     justify-content: center;
-    grid-auto-flow: dense; /* Remplit les éléments en commençant par la première ligne */
+    grid-auto-flow: dense;
 }
 
 .icone img{
-    width: 7vh;
-    height: 7vh;
+    width: 10vh;
+    height: 10vh;
     margin-bottom: 2vh;
     border-radius: 5vh;
 }
 
-.icones {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 colonnes de largeur égale */
-    gap: 20px;
-    justify-content: center;
-    grid-auto-flow: dense; /* Remplit les éléments en commençant par la première ligne */
-}
 
 .icone {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.icone, .identifiee, .fiche-top-3, .fiche-bottom-1 {
+    transition: transform 0.3s ease;
+    background-size: auto;
+}
 
-.icone img {
-    width: 7vh;
-    height: 7vh;
-    margin-bottom: -0.5vh;
-    border-radius: 5vh;
+.icone:hover, .fiche-top-3:hover, .fiche-bottom-1:hover  {
+    transform: scale(1.2) ;
+}
+
+.identifiee:hover {
+    transform: scale(1.2) rotate(10deg);
+    z-index: 99;
 }
 
 .icone span {
     font-size: 1.5vh;
+    margin-top: -2vh;
 }
 
 
@@ -360,62 +324,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-form{
-    width: 65vh;
-    height: 20.5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.input-group {
-    display: flex;
-    align-items: center;
-}
-
-.input-group div {
-    flex: 1;
-}
-
-.input-group div label {
-    display: block;
-}
-#nom, #email{
-    height: 3vh;
-    width: 95%;
-    border-radius: 5%;
-    margin-bottom: 0.4svh;
-    background-color: var(--background_form);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
-    border: none;
-    color:var(--color_text);
-}
-#nom{
-    margin-right: 5%;
-}
-#message {
-    width: 100%;
-    height: 8vh;
-    background-color: var(--background_form);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
-    border: none;
-}
-::placeholder{
-    color:var(--color_text);
-    font-size: 1.3vh;
-    text-align: center;
-}
-
-button {
-    margin-top: 10px;
-    width: 100%;
-    height: 4vh;
-    background-color: var(--color_text);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
-    border: none;
-    color:var(--background_fiches);
-    
 }
 
 .fiche-top-3{
@@ -449,12 +357,13 @@ button {
 .text-projects h2{
     font-size: 2vh;
     color: var(--color_text);
+    margin-left: -2.5vh;
 }
 .text-projects p {
     font-size: 1.4vh;
     width: 30vh;
     height: 22vh;
-    margin-left: 12vh;
+    margin-left: 5vh;
 }
 
 .photo-project img{
@@ -467,5 +376,65 @@ button {
     cursor: pointer;
 } 
 
+.temoigner h1{
+    color: var(--color_text);
+    font-size: 4vh;
+    transform: scaleY(2) scaleX(2);
+    font-family: "Bbas Neue", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 4px;
+    margin-top: 8vh;
+}
 
+form{
+    width: 65vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+}
 
+#nom, #email, #objet{
+    height: 4vh;
+    width: 100%;
+    margin-bottom: 0.4svh;
+    background-color: var(--background_form);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+    color:var(--color_text);
+    text-align: center;
+}
+
+#message {
+    width: 100%;
+    height: 14vh;
+    background-color: var(--background_form);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+}
+::placeholder{
+    color:var(--color_text);
+    font-size: 1.3vh;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--color_text);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Ombre légère autour de la fiche */
+    border: none;
+    color:var(--background_fiches);
+    
+}
+button:hover{
+    cursor: pointer;
+    background-color: #626262;
+}
